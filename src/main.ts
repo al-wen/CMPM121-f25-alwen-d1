@@ -4,3 +4,22 @@ import "./style.css";
 document.body.innerHTML = `
   <p>Example image asset: <img src="${exampleIconUrl}" class="icon" /></p>
 `;
+
+let counter: number = 0;
+
+// Create basic HTML structure
+document.body.innerHTML = `
+  <h1>D1</h1>
+  <p>Counter: <span id="counter">0</span></p>
+  <button id="increment">🤡</button>
+`;
+
+// Add click handler
+const button = document.getElementById("increment")!;
+const counterElement = document.getElementById("counter")!;
+
+button.addEventListener("click", () => {
+  console.log("I have these thingies:", button, counterElement, counter);
+  counter++;
+  counterElement.textContent = counter.toString();
+});
