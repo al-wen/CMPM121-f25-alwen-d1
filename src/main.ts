@@ -19,3 +19,4 @@ button.addEventListener("click", () => {
   counter++;
   counterElement.textContent = counter.toString();
 });
+
